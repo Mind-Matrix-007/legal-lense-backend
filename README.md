@@ -1,0 +1,137 @@
+Perfect 👍 I’ll draft you an **amazing README.md** file for your GitHub repo with emojis, clean structure, and clear explanations of **Part A, B, C, D** (and optional E). This will be engaging for developers, contributors, and judges (if it’s for a hackathon 🚀).
+
+Here’s the full **README.md** you can directly use:
+
+---
+
+```markdown
+# ⚖️ LegalLense  
+
+**LegalLense** is a next-gen **legal document analysis platform** powered by AI 🤖.  
+It streamlines the journey from **upload → processing → results** with a modern interface, clear risk indicators, and negotiation insights.  
+
+Built during a hackathon 🏆, LegalLense reimagines how professionals review and understand legal documents.
+
+---
+
+## ✨ Key Features
+- 🖼️ **Hero Landing Page** – AI-generated legal imagery with drag & drop upload.  
+- 📂 **Seamless File Uploads** – Real-time progress tracking and secure cloud storage.  
+- ⚡ **Automated Processing** – AI backend extracts clauses, metadata, and risks.  
+- 📊 **Results Dashboard** – TL;DR summary, document health score, clause-by-clause analysis.  
+- 🧑‍⚖️ **Negotiation Assistant** – Sidebar with suggestions, scenario simulation, and Q&A chat.  
+- 📑 **Comparison Mode** – Quickly contrast contracts or track redlines.  
+
+---
+
+## 🏗️ Backend Architecture (Parts A–D)
+
+Our backend is modular 🔌 and split into **four core parts** (+ an optional extension).  
+
+### 🔹 Part A — Signed URL Service  
+- Provides **secure, time-limited URLs** for clients to upload files directly to Google Cloud Storage (GCS).  
+- Prevents exposing bucket credentials while enabling safe uploads.  
+
+### 🔹 Part B — Upload Processor  
+- Triggered when a file is uploaded to GCS.  
+- Extracts **raw text** from PDFs or docs 📑.  
+- Handles OCR (if needed), cleans text, and prepares it for AI processing.  
+
+### 🔹 Part C — Processing & AI Extraction  
+- Runs the **main NLP/AI pipeline**:  
+  - Clause extraction  
+  - Entity recognition  
+  - Risk scoring 🚨  
+  - Summarization  
+- Outputs structured JSON results with page mapping and highlights.  
+
+### 🔹 Part D — Firestore Storage & Results API  
+- Stores extracted results in **Firestore** under user/project IDs.  
+- Enables frontend dashboard to **query results in real-time**.  
+- Supports TL;DR summaries, clause-level details, and negotiation suggestions.  
+
+---
+
+## 🔸 Optional Part E — Enhancements  
+- **Comparison Engine** 🆚: Spot differences between multiple documents.  
+- **Scenario Simulator** 🎭: Run "what-if" cases for negotiations.  
+- **Chatbot Assistant** 💬: Answer user questions about the uploaded contract.  
+- **Export/Download** ⬇️: PDF/CSV export with annotations and summaries.  
+
+---
+
+## 🎨 UI & Experience  
+From our [Figma Designs](./LegalLense%20(Figma).pdf) and [Wireframes](./LegalLense-WireFrame.pdf):  
+- Dark-themed, modern, and professional.  
+- Step-by-step flow: **Upload → Processing → Dashboard → Insights**.  
+- Clear risk flags 🔴🟡🟢 for each clause.  
+
+---
+
+## 🚀 Tech Stack
+- **Backend:** Python (FastAPI/Flask) + GCP Cloud Functions / Cloud Run  
+- **Database:** Firestore (NoSQL)  
+- **Storage:** Google Cloud Storage (buckets)  
+- **AI/NLP:** Transformers, OpenAI/GPT APIs (for summarization & entity extraction)  
+
+---
+
+## 📂 Project Structure BACKEND
+```
+
+legal-lense/
+├── signed\_url\_service/   # Part A
+├── process\_upload/       # Part B
+├── processor\_service/    # Part C
+├── result\_writer/        # Part D
+├── docs/                 # Wireframes, Figma exports
+└── README.md             # You are here 🎉
+
+````
+
+---
+
+## 🛠️ How to Run Locally
+1. Clone the repo:  
+   ```bash
+   git clone https://github.com/<ORG>/<REPO>.git
+   cd <REPO>
+````
+
+2. Set up environment variables (`.env`):
+
+   ```
+   GCP_PROJECT=your-project-id
+   GCS_BUCKET=legal-lense-uploads
+   ```
+3. Deploy services:
+
+   ```bash
+   gcloud run deploy ...
+   gcloud functions deploy ...
+   ```
+4. Start frontend & backend locally for testing.
+
+---
+
+## 👥 Team
+
+Made with ❤️ by a passionate hackathon team:
+
+* Developers 💻
+* Designers 🎨
+* AI/NLP Specialists 🤖
+
+---
+
+## 📜 License
+
+MIT License – Free to use, modify, and share.
+
+---
+
+## 🌟 Star this repo
+
+If you like what we built, please ⭐ our repo and support the project!
+
+```
