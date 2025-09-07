@@ -1,5 +1,3 @@
-
-```markdown
 # ⚖️ LegalLense  
 
 **LegalLense** is a next-gen **legal document analysis platform** powered by AI 🤖.  
@@ -64,6 +62,7 @@ From our [Figma Designs](./LegalLense%20(Figma).pdf) and [Wireframes](./LegalLen
 ---
 
 ## 🚀 Tech Stack
+- **Frontend:** React + TailwindCSS + shadcn/ui  
 - **Backend:** Python (FastAPI/Flask) + GCP Cloud Functions / Cloud Run  
 - **Database:** Firestore (NoSQL)  
 - **Storage:** Google Cloud Storage (buckets)  
@@ -71,62 +70,4 @@ From our [Figma Designs](./LegalLense%20(Figma).pdf) and [Wireframes](./LegalLen
 
 ---
 
-## 📂 Project Structure BACKEND
-```
-
-legal-lense/
-├── signed\_url\_service/   # Part A
-├── process\_upload/       # Part B
-├── processor\_service/    # Part C
-├── result\_writer/        # Part D
-├── docs/                 # Wireframes, Figma exports
-└── README.md             # You are here 🎉
-
-````
-
----
-
-## 🛠️ How to Run Locally
-1. Clone the repo:  
-   ```bash
-   git clone https://github.com/<ORG>/<REPO>.git
-   cd <REPO>
-````
-
-2. Set up environment variables (`.env`):
-
-   ```
-   GCP_PROJECT=your-project-id
-   GCS_BUCKET=legal-lense-uploads
-   ```
-3. Deploy services:
-
-   ```bash
-   gcloud run deploy ...
-   gcloud functions deploy ...
-   ```
-4. Start frontend & backend locally for testing.
-
----
-
-## 👥 Team
-
-Made with ❤️ by a passionate hackathon team:
-
-* Developers 💻
-* Designers 🎨
-* AI/NLP Specialists 🤖
-
----
-
-## 📜 License
-
-MIT License – Free to use, modify, and share.
-
----
-
-## 🌟 Star this repo
-
-If you like what we built, please ⭐ our repo and support the project!
-
-```
+## 📂 Project Structure
