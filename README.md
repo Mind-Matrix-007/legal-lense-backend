@@ -62,7 +62,7 @@ From our [Figma Designs](./LegalLense%20(Figma).pdf) and [Wireframes](./LegalLen
 ---
 
 ## 🚀 Tech Stack
-- **Frontend:** React + TailwindCSS + shadcn/ui  
+ 
 - **Backend:** Python (FastAPI/Flask) + GCP Cloud Functions / Cloud Run  
 - **Database:** Firestore (NoSQL)  
 - **Storage:** Google Cloud Storage (buckets)  
@@ -70,4 +70,3 @@ From our [Figma Designs](./LegalLense%20(Figma).pdf) and [Wireframes](./LegalLen
 
 ---
 
-## 📂 Project Structure
